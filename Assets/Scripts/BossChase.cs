@@ -10,7 +10,6 @@ public class BossChase : MonoBehaviour
 
     private static GameObject bossInstance;
 
-  
     void Start()
     {
         if (bossInstance == null)
@@ -33,9 +32,11 @@ public class BossChase : MonoBehaviour
     {
         if (bossInstance == null)
         {
- 
+            
             Vector2 spawnPosition = new Vector2(0, 0);
             bossInstance = Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
+            bossInstance.tag = "Boss"; 
+            bossInstance.AddComponent<BoxCollider2D>().isTrigger = true;
         }
     }
 }
