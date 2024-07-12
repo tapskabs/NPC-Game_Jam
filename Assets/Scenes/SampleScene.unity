@@ -306,7 +306,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.72365606, g: 0.8867924, b: 0.82626325, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -485,11 +485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1050643924 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1626155976412755254, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
-  m_PrefabInstance: {fileID: 3360656732163446316}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1083598685 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 483948191689520150, guid: 33c0830d92d3b474a8fde85924b4bd97, type: 3}
@@ -515,6 +510,28 @@ MonoBehaviour:
   currentProgress: 0
   currentRequirement: 0
   makeEmSmaller: {fileID: 0}
+--- !u!95 &1083598697
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083598685}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0ade9c9a2647d4d4db8b6678d8f4affb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1144808841
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,7 +653,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1626155976412755254, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
-  boxCollider2D: {fileID: 1167910714}
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  numberOfPrefabsToSpawn: 10
 --- !u!4 &1167910713
 Transform:
   m_ObjectHideFlags: 0
@@ -710,10 +732,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa9c7d83771e99949b2f99a9709b65e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1050643924}
-  numberOfPrefabs: 40
-  spawnAreaMin: {x: -15, y: -15}
-  spawnAreaMax: {x: 15, y: 15}
+  prefab: {fileID: 0}
+  numberOfPrefabs: 10
+  spawnAreaMin: {x: 0, y: 0}
+  spawnAreaMax: {x: 0, y: 0}
 --- !u!1 &1194337771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,69 +1227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6305e910bad3434ca391abb148f5035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthSlider: {fileID: 1876034503}
-  gradient:
-    key0:
-      r: 1
-      g: 1
-      b: 1
-      a: 1
-    key1:
-      r: 1
-      g: 1
-      b: 1
-      a: 1
-    key2:
-      r: 0
-      g: 0
-      b: 0
-      a: 0
-    key3:
-      r: 0
-      g: 0
-      b: 0
-      a: 0
-    key4:
-      r: 0
-      g: 0
-      b: 0
-      a: 0
-    key5:
-      r: 0
-      g: 0
-      b: 0
-      a: 0
-    key6:
-      r: 0
-      g: 0
-      b: 0
-      a: 0
-    key7:
-      r: 0
-      g: 0
-      b: 0
-      a: 0
-    ctime0: 8481
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 1
-    m_ColorSpace: -1
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  fill: {fileID: 1299909436}
 --- !u!224 &1967708867
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1609,6 +1568,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2162564307572234005, guid: 33c0830d92d3b474a8fde85924b4bd97, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -800466989, guid: 1810e981bc536d344b6c12bbd2e0eed4, type: 3}
+    - target: {fileID: 3244525406895637777, guid: 33c0830d92d3b474a8fde85924b4bd97, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1083598697}
+    - target: {fileID: 3244525406895637777, guid: 33c0830d92d3b474a8fde85924b4bd97, type: 3}
+      propertyPath: levelSystem
+      value: 
+      objectReference: {fileID: 1083598691}
     - target: {fileID: 5322434268335929501, guid: 33c0830d92d3b474a8fde85924b4bd97, type: 3}
       propertyPath: healthBar
       value: 
@@ -1633,6 +1604,14 @@ PrefabInstance:
       propertyPath: gradient.key0.r
       value: 0.17994298
       objectReference: {fileID: 0}
+    - target: {fileID: 6914041109185257365, guid: 33c0830d92d3b474a8fde85924b4bd97, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914041109185257365, guid: 33c0830d92d3b474a8fde85924b4bd97, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.61
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1640,6 +1619,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 483948191689520150, guid: 33c0830d92d3b474a8fde85924b4bd97, type: 3}
       insertIndex: 1
       addedObject: {fileID: 1083598691}
+    - targetCorrespondingSourceObject: {fileID: 483948191689520150, guid: 33c0830d92d3b474a8fde85924b4bd97, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1083598697}
   m_SourcePrefab: {fileID: 100100000, guid: 33c0830d92d3b474a8fde85924b4bd97, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -6,6 +6,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public Animator animator;
 
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -43,6 +44,10 @@ public class PlayerMovement : MonoBehaviour
             GoSmall();
             Debug.Log("Size Reduced New LEVEL");
         }
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
 
