@@ -1,0 +1,514 @@
+fileFormatVersion: 2
+guid: 1810e981bc536d344b6c12bbd2e0eed4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2862867445421472643
+    second: SPRITE_SHEET Komodo_0
+  - first:
+      213: 4604783990778172348
+    second: SPRITE_SHEET Komodo_1
+  - first:
+      213: 436645246613246897
+    second: SPRITE_SHEET Komodo_2
+  - first:
+      213: 3819719699906608748
+    second: SPRITE_SHEET Komodo_3
+  - first:
+      213: 1820438047337193445
+    second: SPRITE_SHEET Komodo_4
+  - first:
+      213: -2624898890837258987
+    second: SPRITE_SHEET Komodo_5
+  - first:
+      213: -6324624845909488194
+    second: SPRITE_SHEET Komodo_6
+  - first:
+      213: 1516950273693824230
+    second: SPRITE_SHEET Komodo_7
+  - first:
+      213: 4581986824693763562
+    second: SPRITE_SHEET Komodo_8
+  - first:
+      213: -2572745996252964235
+    second: SPRITE_SHEET Komodo_9
+  - first:
+      213: -4378541559542922997
+    second: SPRITE_SHEET Komodo_10
+  - first:
+      213: -6761907477535981112
+    second: SPRITE_SHEET Komodo_11
+  - first:
+      213: -2070507966809420423
+    second: SPRITE_SHEET Komodo_12
+  - first:
+      213: 8746605075439422593
+    second: SPRITE_SHEET Komodo_13
+  - first:
+      213: -3625407204810815416
+    second: SPRITE_SHEET Komodo_14
+  - first:
+      213: 4773283495085003011
+    second: SPRITE_SHEET Komodo_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SPRITE_SHEET Komodo_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 193
+        width: 47
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91859136858a694895303866e4bc833
+      internalID: 853908958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE_SHEET Komodo_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 193
+        width: 46
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd5d5275974f544ab11adc91efb4e3e
+      internalID: -135791537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE_SHEET Komodo_2
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 193
+        width: 47
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c921d0a349dc1f946a9d8ca38d9ac7cd
+      internalID: 541334142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE_SHEET Komodo_3
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 193
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d24f5d705a6d1d4da7ab807e6c6951e
+      internalID: 735818255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE_SHEET Komodo_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 130
+        width: 41
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 093870b4be7559c4ca9ea1927a3dd528
+      internalID: -1624459248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE_SHEET Komodo_5
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 131
+        width: 41
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c2246d5ade023489f510722a28fe39
+      internalID: -229632182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE_SHEET Komodo_6
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 129
+        width: 41
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3f589a6f9592d4b81a402f67b00ef7
+      internalID: 1099592970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE_SHEET Komodo_7
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 130
+        width: 41
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af011c22b5e1ac84abdc079a78b53aa8
+      internalID: 1410194980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE_SHEET Komodo_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 64
+        width: 52
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c395a0e7c3ee4541b0d7f7a44b39cb1
+      internalID: -800466989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE_SHEET Komodo_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 52
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdbb3eed29b39a2419bb359441a0bcf3
+      internalID: -1944480417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE_SHEET Komodo_10
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 64
+        width: 52
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f32699afda5704bb3068a7d5e0f4ef
+      internalID: -583178472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE_SHEET Komodo_11
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 65
+        width: 52
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c328e47f4ca59499412993988fb749
+      internalID: -182114048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE_SHEET Komodo_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1
+        width: 52
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9276530cf5e24d48ab337f1802c3caf
+      internalID: -1941193638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE_SHEET Komodo_13
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 52
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84cfeca8a1c1a1e47ae7205d7d967e2c
+      internalID: -347103074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE_SHEET Komodo_14
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1
+        width: 52
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3230a748a6b27fe479da9e5f6d0b7a56
+      internalID: 1029019408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE_SHEET Komodo_15
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 0
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c5ee269d15e08148a57146de410059f
+      internalID: -1341058660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 63f6f1a6c775ba5409628739a3d3657c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SPRITE_SHEET Komodo_0: 853908958
+      SPRITE_SHEET Komodo_1: -135791537
+      SPRITE_SHEET Komodo_10: -583178472
+      SPRITE_SHEET Komodo_11: -182114048
+      SPRITE_SHEET Komodo_12: -1941193638
+      SPRITE_SHEET Komodo_13: -347103074
+      SPRITE_SHEET Komodo_14: 1029019408
+      SPRITE_SHEET Komodo_15: -1341058660
+      SPRITE_SHEET Komodo_2: 541334142
+      SPRITE_SHEET Komodo_3: 735818255
+      SPRITE_SHEET Komodo_4: -1624459248
+      SPRITE_SHEET Komodo_5: -229632182
+      SPRITE_SHEET Komodo_6: 1099592970
+      SPRITE_SHEET Komodo_7: 1410194980
+      SPRITE_SHEET Komodo_8: -800466989
+      SPRITE_SHEET Komodo_9: -1944480417
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
