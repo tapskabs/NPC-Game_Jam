@@ -191,6 +191,79 @@ Transform:
   - {fileID: 917019653}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &384315047
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 778482779201810908, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
+      propertyPath: m_Color.b
+      value: 0.97735846
+      objectReference: {fileID: 0}
+    - target: {fileID: 778482779201810908, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
+      propertyPath: m_Color.g
+      value: 0.24103929
+      objectReference: {fileID: 0}
+    - target: {fileID: 778482779201810908, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
+      propertyPath: m_Color.r
+      value: 0.123552844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626155976412755254, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
+      propertyPath: m_Name
+      value: HealthPickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626155976412755254, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
+      propertyPath: m_TagString
+      value: HealthPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195605585093832624, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195605585093832624, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9699
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195605585093832624, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195605585093832624, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195605585093832624, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195605585093832624, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195605585093832624, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195605585093832624, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195605585093832624, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195605585093832624, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 369922218397a9f4c87251fa34081ac0, type: 3}
 --- !u!4 &437902089 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1194082502502460678, guid: 33c0830d92d3b474a8fde85924b4bd97, type: 3}
@@ -1134,15 +1207,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 1876034503}
   gradient:
-    serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
+    key0:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+    key1:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+    key2:
+      r: 0
+      g: 0
+      b: 0
+      a: 0
+    key3:
+      r: 0
+      g: 0
+      b: 0
+      a: 0
+    key4:
+      r: 0
+      g: 0
+      b: 0
+      a: 0
+    key5:
+      r: 0
+      g: 0
+      b: 0
+      a: 0
+    key6:
+      r: 0
+      g: 0
+      b: 0
+      a: 0
+    key7:
+      r: 0
+      g: 0
+      b: 0
+      a: 0
     ctime0: 8481
     ctime1: 65535
     ctime2: 0
@@ -1298,7 +1402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.403268, g: 0.78867924, b: 0.42059097, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1509,6 +1613,26 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1967708866}
+    - target: {fileID: 5322434268335929501, guid: 33c0830d92d3b474a8fde85924b4bd97, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322434268335929501, guid: 33c0830d92d3b474a8fde85924b4bd97, type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 1876034503}
+    - target: {fileID: 5322434268335929501, guid: 33c0830d92d3b474a8fde85924b4bd97, type: 3}
+      propertyPath: gradient.key0.b
+      value: 0.21383975
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322434268335929501, guid: 33c0830d92d3b474a8fde85924b4bd97, type: 3}
+      propertyPath: gradient.key0.g
+      value: 0.7509433
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322434268335929501, guid: 33c0830d92d3b474a8fde85924b4bd97, type: 3}
+      propertyPath: gradient.key0.r
+      value: 0.17994298
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1525,6 +1649,7 @@ SceneRoots:
   - {fileID: 4020057451770867646}
   - {fileID: 1167910713}
   - {fileID: 3360656732163446316}
+  - {fileID: 384315047}
   - {fileID: 1666027251}
   - {fileID: 1240633417033662537}
   - {fileID: 116247632}

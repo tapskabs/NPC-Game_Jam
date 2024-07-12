@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Edible
   - Boss
+  - HealthPickup
   layers:
   - Default
   - TransparentFX

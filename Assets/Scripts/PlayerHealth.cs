@@ -1,18 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     private int currentHealth;
-    public HealthBar healthBar;
+    public Slider healthSlider;
+    public Gradient gradient;
+    public Image fill;
+
+    public void SetMaxHealth(int health)
+    {
+        healthSlider.maxValue = health;
+        healthSlider.value = health;
+
+    }
+
+    public void SetHealth(int health)
+    {
+        healthSlider.value = health;
+
+    }
 
     void Start()
     {
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        SetMaxHealth(maxHealth);
     }
+
+
 
     public void TakeDamage(int damage)
     {
@@ -24,7 +42,7 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = 0;
         }
 
-        healthBar.SetHealth(currentHealth);
+        SetHealth(currentHealth);
         Debug.Log("Health bar updated. Current health: " + currentHealth);
 
         if (currentHealth <= 0)
@@ -33,17 +51,43 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    private void SaveHealth()
+    {
+        PlayerPrefs.SetInt("PlayerHealth", currentHealth);
+        PlayerPrefs.Save();
+    }
+
+    // Call this method to heal the player
+    public void Heal(int amount)
+    {
+        currentHealth += amount;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        SaveHealth();
+        Debug.Log("Player Health: " + currentHealth);
+
+        SetHealth(currentHealth);
+    }
+
     void Die()
     {
         Debug.Log("Player Died");
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Boss"))
+        if (other.gameObject.CompareTag("Boss"))
         {
             Debug.Log("Collision with boss detected.");
             TakeDamage(10);
+        }
+
+        if (other.gameObject.CompareTag("HealthPickup"))
+        {
+            Heal(15); // Adjust healing value as needed
+            Destroy(other.gameObject); // Optionally destroy the health pickup
         }
 
     }
