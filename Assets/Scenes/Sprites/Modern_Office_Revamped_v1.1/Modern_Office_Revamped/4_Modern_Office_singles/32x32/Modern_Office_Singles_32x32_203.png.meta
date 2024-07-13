@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Modern_Office_Singles_32x32_203_0: 2925704882053782724
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
