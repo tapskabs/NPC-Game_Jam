@@ -13,6 +13,7 @@ public class LevelSystem : MonoBehaviour
     public int initialRequirement = 15; // Initial requirement for the first level
     public TextMeshProUGUI LevelCount;
     public GameObject BossPrefab;
+    private static GameObject BossPrefabInstance;
     public int numberOfBosses;
     public int currentLevel;
     public int currentProgress;
@@ -23,7 +24,15 @@ public class LevelSystem : MonoBehaviour
     public GameObject LvlClearPanel;
     public AudioSource LvlClear;
     public AudioSource eat;
-    
+
+    public Transform player;
+    public float bossSpeed = 3f;
+    public static LevelSystem instance;
+
+    private void Awake()
+    {
+        instance = this; 
+    }
 
     void Start()
     {
@@ -32,8 +41,11 @@ public class LevelSystem : MonoBehaviour
         currentRequirement = initialRequirement;
         UpdateLevelUI();
         makeEmSmaller = GetComponent<PlayerMovement>();
+        
         LvlClearPanel.SetActive(false);
-        Time.timeScale = 1.0f;  
+        Time.timeScale = 1.0f;
+        SpawnBoss();
+        
     }
 
     // Call this function to increase progress
@@ -44,18 +56,11 @@ public class LevelSystem : MonoBehaviour
 
         if (currentProgress >= currentRequirement)
         {
-            for (int i = 0; i < numberOfBosses; i++)
-            {
-                float randomX = Random.Range(spawnAreaMin.x, spawnAreaMax.x);
-                float randomY = Random.Range(spawnAreaMin.y, spawnAreaMax.y);
-                Vector2 spawnPosition = new Vector2(randomX, randomY);
-
-                Instantiate(BossPrefab, spawnPosition, Quaternion.identity);
-            }
-
+           
             currentProgress = 0;
             
             currentLevel++;
+            Debug.Log("YAYYYY, NEXT LEVEL" + currentLevel); 
             currentRequirement += 15;
             initialRequirement = currentRequirement;
             LevelPassed();
@@ -74,11 +79,11 @@ public class LevelSystem : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Edible"))
+        if (other.CompareTag("HealthPickup"))
         {
            
             IncreaseProgress();
-            Destroy(other.gameObject); // Optionally destroy the edible object
+           // Destroy(other.gameObject); // Optionally destroy the edible object
             eat.Play();
         }
     }
@@ -99,8 +104,9 @@ public class LevelSystem : MonoBehaviour
 
     public void NextLevel()
     {
-     
+        
         PlayerPrefs.SetInt("Current Progress", currentProgress);
+        
         PlayerPrefs.Save();
         Debug.Log("Player Progress saved");
     }
@@ -108,12 +114,31 @@ public class LevelSystem : MonoBehaviour
     void UpdateLevelUI()
     {
         LevelBarFill.value = (int)currentProgress; // Update the fill amount of the level bar
-        Debug.Log("Level: " + currentLevel + " Progress: " + currentProgress + "/" + currentRequirement);
+       // Debug.Log("Level: " + currentLevel + " Progress: " + currentProgress + "/" + currentRequirement);
     }
 
     private void Update()
     {
         UpdateLevelUI();
+        if (BossPrefabInstance != null)
+        {
+
+            Vector2 direction = (player.position - BossPrefabInstance.transform.position).normalized;
+            BossPrefabInstance.transform.position = Vector2.MoveTowards(BossPrefabInstance.transform.position, player.position, bossSpeed * Time.deltaTime);
+        }
+
+    }
+
+    void SpawnBoss()
+    {
+        if (BossPrefab == null)
+        {
+
+            Vector2 spawnPosition = new Vector2(0, 0);
+            BossPrefabInstance = Instantiate(BossPrefab, spawnPosition, Quaternion.identity);
+            BossPrefabInstance.tag = "Boss";
+            BossPrefabInstance.AddComponent<BoxCollider2D>().isTrigger = true;
+        }
     }
 }
 

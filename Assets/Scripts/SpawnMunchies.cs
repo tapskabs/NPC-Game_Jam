@@ -13,7 +13,12 @@ public class SpawnMunchies : MonoBehaviour
     public Vector2 spawnAreaMin; // Minimum x and y coordinates for the spawn area
     public Vector2 spawnAreaMax; // Maximum x and y coordinates for the spawn area
     public int spawnCount;
+    public static SpawnMunchies instance;
 
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         SpawnPrefabs();
@@ -56,9 +61,5 @@ public class SpawnMunchies : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

@@ -51,3 +51,6 @@ TagManager:
   - name: objects
     uniqueID: 1794753389
     locked: 0
+  - name: Playable Area
+    uniqueID: 115303191
+    locked: 0

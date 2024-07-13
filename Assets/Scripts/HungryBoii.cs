@@ -35,7 +35,7 @@ public class HungryBoii : MonoBehaviour
             PlayerHealth.TakeDamage(1);
             currentHunger = 0f;
             // Handle what happens when the timer reaches 0
-            Debug.Log("Time's up!");
+           // Debug.Log("Time's up!");
 
             
         }
@@ -45,7 +45,7 @@ public class HungryBoii : MonoBehaviour
     // Call this function to increase health
     public void Eat()
     {
-        Debug.Log("Time added, player Chowed");
+       // Debug.Log("Time added, player Chowed");
         currentHunger += 100f * Time.deltaTime;
         if (currentHunger > maxHunger) currentHunger = maxHunger;
         UpdateHungerUI();
@@ -53,7 +53,7 @@ public class HungryBoii : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Edible")) 
+        if (other.CompareTag("HealthPickup")) 
         {
             Eat();
         }
@@ -69,7 +69,7 @@ public class HungryBoii : MonoBehaviour
     {
         GettingHungry();
         // Debug.Log("Hunger:" + Mathf.Ceil(currentHunger).ToString());
-        Debug.Log("Hunger:" + currentHunger.ToString());
+     ///   Debug.Log("Hunger:" + currentHunger.ToString());
        // UpdateHungerUI();
         
        

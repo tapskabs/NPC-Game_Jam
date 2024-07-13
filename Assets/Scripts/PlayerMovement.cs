@@ -68,17 +68,17 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = movement * moveSpeed * Time.deltaTime;
     }
     void OnTriggerEnter2D(Collider2D other)
-    {   
-        if (other.gameObject.CompareTag("Edible"))
+    {
+        if (other.gameObject.CompareTag("HealthPickup"))
         {
             edibleCount++;
             Destroy(other.gameObject);
             Debug.Log("Food eaten" + edibleCount);
             GetBig();
             //Debug.Log("Food eaten" + edibleCount);
-            
+
         }
-       
+
     }
     public void GetBig()
     {
@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = newSize;
     }
 
-    void GoSmall()
+   public void GoSmall()
     {
         ;
         Vector3 originalSize = transform.localScale;

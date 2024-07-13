@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5975422145699503882}
   m_Layer: 0
   m_Name: Circle
-  m_TagString: Edible
+  m_TagString: HealthPickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
