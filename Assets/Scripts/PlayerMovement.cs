@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 movement;
-    public float sizeIncreaseAmount = 0.1f;
+    public float sizeIncreaseAmount = 0.001f;
     public float sizeAmountOG = 0.0f;
     private int edibleCount;
     public Vector3 original;
@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void GetBig()
     {
-        sizeUpCount += 0.1f;
+        sizeUpCount += 0.01f;
         Debug.Log("Size Up Float Count" + sizeUpCount);
 
         Vector3 newSize = transform.localScale;

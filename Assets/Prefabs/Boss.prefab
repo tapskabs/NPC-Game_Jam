@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2039099704068433996}
   - component: {fileID: 6503078032236876181}
   - component: {fileID: 297703662132164391}
+  - component: {fileID: 4072198152402339293}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -78,8 +79,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.9339623, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -5456374352486159126, guid: a86c86e3180741c428982cca84cf1e2b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -127,7 +128,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.6842105, y: 1.6842105}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -174,6 +175,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afd7c6c19af9ed348a7e5103a515e217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossPrefab: {fileID: 0}
-  player: {fileID: 0}
-  bossSpeed: 3
+  bossPrefab: {fileID: 2816727101815636367}
+  player: {fileID: 6624644652869143807, guid: 3867788f41c60a643a7011bb6ddea35f, type: 3}
+  bossSpeed: 1
+--- !u!95 &4072198152402339293
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2816727101815636367}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 75d2a8186dbc067478204c46d4c29703, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

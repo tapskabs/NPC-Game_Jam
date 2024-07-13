@@ -10,7 +10,12 @@ public class PlayerHealth : MonoBehaviour
     public Slider healthSlider;
     public Gradient gradient;
     public Image fill;
-
+    public HungryBoii death;
+    public GameObject DeathPanel;
+    public AudioSource hit;
+    public AudioSource heal;
+    //public AudioSource died;
+    public AudioSource Lvlfailed;
     public void SetMaxHealth(int health)
     {
         healthSlider.maxValue = health;
@@ -28,18 +33,21 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         SetMaxHealth(maxHealth);
+        death = GetComponent<HungryBoii>();
     }
 
 
 
     public void TakeDamage(int damage)
     {
+       
         currentHealth -= damage;
         Debug.Log("Player took damage: " + damage + ". Current health: " + currentHealth);
 
         if (currentHealth < 0)
         {
             currentHealth = 0;
+            hit.Play();
         }
 
         SetHealth(currentHealth);
@@ -49,6 +57,8 @@ public class PlayerHealth : MonoBehaviour
         {
             Die();
         }
+
+        
     }
 
     private void SaveHealth()
@@ -60,6 +70,7 @@ public class PlayerHealth : MonoBehaviour
     // Call this method to heal the player
     public void Heal(int amount)
     {
+      
         currentHealth += amount;
         if (currentHealth > maxHealth)
         {
@@ -69,11 +80,17 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("Player Health: " + currentHealth);
 
         SetHealth(currentHealth);
+        heal.Play();
     }
 
     void Die()
     {
+       
+       
         Debug.Log("Player Died");
+        Time.timeScale = 0;
+        DeathPanel.SetActive(true);
+        Lvlfailed.Play();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -81,12 +98,12 @@ public class PlayerHealth : MonoBehaviour
         if (other.gameObject.CompareTag("Boss"))
         {
             Debug.Log("Collision with boss detected.");
-            TakeDamage(10);
+            TakeDamage(3);
         }
 
         if (other.gameObject.CompareTag("HealthPickup"))
         {
-            Heal(15); // Adjust healing value as needed
+            Heal(8); // Adjust healing value as needed
             Destroy(other.gameObject); // Optionally destroy the health pickup
         }
 
