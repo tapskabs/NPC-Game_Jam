@@ -33046,7 +33046,7 @@ MonoBehaviour:
   prefab2: {fileID: 1311384987}
   prefab3: {fileID: 1849810058}
   prefab4: {fileID: 2060995745}
-  numberOfPrefabs: 5
+  numberOfPrefabs: 16
   spawnAreaMin: {x: -15.5, y: 8.8}
   spawnAreaMax: {x: 13, y: 34.5}
 --- !u!4 &929811704
@@ -34872,7 +34872,7 @@ Transform:
   m_GameObject: {fileID: 1167910710}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 0.7, z: -0.08305548}
+  m_LocalPosition: {x: -1.7, y: 8.5, z: -0.08305548}
   m_LocalScale: {x: 10.364061, y: 6.42687, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34940,9 +34940,9 @@ MonoBehaviour:
   prefab2: {fileID: 18206658}
   prefab3: {fileID: 656228970}
   prefab4: {fileID: 632348331}
-  numberOfPrefabs: 11
-  spawnAreaMin: {x: -26, y: -10}
-  spawnAreaMax: {x: 23, y: 40}
+  numberOfPrefabs: 15
+  spawnAreaMin: {x: -24.7, y: -9}
+  spawnAreaMax: {x: 20.6, y: 18.7}
   spawnCount: 0
 --- !u!1 &1179281755
 GameObject:
@@ -35490,7 +35490,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1365818465}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 519420034}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: ExitToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1365818465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35611,7 +35623,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1390528175}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 519420034}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: ExitToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1390528175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38116,6 +38140,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1039314184}
+    - target: {fileID: 297703662132164391, guid: 09e030c81aaf88047a06b7d72f3cab3e, type: 3}
+      propertyPath: bossSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2816727101815636367, guid: 09e030c81aaf88047a06b7d72f3cab3e, type: 3}
       propertyPath: m_Name
       value: Boss

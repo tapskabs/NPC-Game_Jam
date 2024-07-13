@@ -69,30 +69,44 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("HealthPickup"))
+        if (other.gameObject.CompareTag("Edible"))
         {
-            edibleCount++;
-            Destroy(other.gameObject);
-            Debug.Log("Food eaten" + edibleCount);
-            GetBig();
-            //Debug.Log("Food eaten" + edibleCount);
+            GetEdibleCount();
+
+            if (edibleCount >= 4)
+            {
+                GetBig();
+                edibleCount = 0; // Reset the count after growing
+            }
+
+            else 
+            {
+                edibleCount++;
+                Destroy(other.gameObject);
+                Debug.Log("Food eaten" + edibleCount);
+                //Debug.Log("Food eaten" + edibleCount);
+            }
 
         }
 
     }
+
     public void GetBig()
     {
-        sizeUpCount += 0.01f;
-        Debug.Log("Size Up Float Count" + sizeUpCount);
+        sizeUpCount += 0.1f;
 
         Vector3 newSize = transform.localScale;
         newSize += new Vector3(sizeIncreaseAmount, sizeIncreaseAmount, 0); // Adjust this line for 3D scaling if needed
         transform.localScale = newSize;
+
+        
+        Debug.Log("Size Up Float Count" + sizeUpCount);
+
+        
     }
 
    public void GoSmall()
     {
-        ;
         Vector3 originalSize = transform.localScale;
         originalSize -= new Vector3(sizeUpCount, sizeUpCount, 0);
         transform.localScale = originalSize;
