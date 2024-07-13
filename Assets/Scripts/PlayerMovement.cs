@@ -19,6 +19,16 @@ public class PlayerMovement : MonoBehaviour
     public LevelSystem levelSystem;
     public Animator animator;
 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Area Colliders"))
+        {
+            rb.velocity = Vector2.zero;
+
+        }
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -50,10 +60,12 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
+
     void FixedUpdate()
     {
-        
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
+        // rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.velocity = movement * moveSpeed * Time.deltaTime;
     }
     void OnTriggerEnter2D(Collider2D other)
     {   

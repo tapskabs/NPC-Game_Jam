@@ -7,6 +7,7 @@ TagManager:
   - Edible
   - Boss
   - HealthPickup
+  - Area Colliders
   layers:
   - Default
   - TransparentFX
