@@ -4,60 +4,45 @@ using UnityEngine;
 
 public class BossChase : MonoBehaviour
 {
-    public GameObject bossPrefab; 
-    public Transform player; 
-    public float bossSpeed = 3f; 
+    public GameObject bossPrefab;
+    public Transform player;
+    public float bossSpeed = 3f;
 
-    private static GameObject bossInstance;
-   // LevelSystem ls;
+    private List<GameObject> bosses = new List<GameObject>(); // List to store multiple boss instances
+    private int currentLevel = 0;
 
     void Start()
     {
-        
-        if (bossInstance == null)
-        {
-           
-                SpawnBoss();
-            
-           
-        }
+        // Spawn the initial boss
+        SpawnBoss();
     }
 
     void Update()
     {
-        if (bossInstance != null)
+        int level = LevelSystem.instance.currentLevel;
+
+        if (level != currentLevel)
         {
-           if(LevelSystem.instance.currentLevel == 1)
+            currentLevel = level;
+            SpawnBoss();
+        }
+
+        foreach (GameObject boss in bosses)
+        {
+            if (boss != null)
             {
-                Vector2 direction = (player.position - bossInstance.transform.position).normalized;
-                bossInstance.transform.position = Vector2.MoveTowards(bossInstance.transform.position, player.position, bossSpeed * Time.deltaTime);
+                Vector2 direction = (player.position - boss.transform.position).normalized;
+                boss.transform.position = Vector2.MoveTowards(boss.transform.position, player.position, bossSpeed * Time.deltaTime);
             }
-           else if (LevelSystem.instance.currentLevel == 2)
-            {
-                SpawnBoss();
-                Vector2 direction = (player.position - bossInstance.transform.position).normalized;
-                bossInstance.transform.position = Vector2.MoveTowards(bossInstance.transform.position, player.position, bossSpeed * Time.deltaTime);
-            }
-           else if(LevelSystem.instance.currentLevel == 3)
-            {
-                SpawnBoss();
-                Vector2 direction = (player.position - bossInstance.transform.position).normalized;
-                bossInstance.transform.position = Vector2.MoveTowards(bossInstance.transform.position, player.position, bossSpeed * Time.deltaTime);
-            }
-           
         }
     }
 
     void SpawnBoss()
     {
-        if (bossInstance == null)
-        {
-
-            Vector2 spawnPosition = new Vector2(0, 0);
-            bossInstance = Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
-            bossInstance.tag = "Boss";
-            bossInstance.AddComponent<BoxCollider2D>().isTrigger = true;
-            
-        }
+        Vector2 spawnPosition = new Vector2(0, 0); // Define your spawn position
+        GameObject newBoss = Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
+        newBoss.tag = "Boss";
+        newBoss.AddComponent<BoxCollider2D>().isTrigger = true;
+        bosses.Add(newBoss);
     }
 }
